@@ -1,0 +1,383 @@
+:root {
+  --primary: #0066ff;
+  --secondary: #4f38db;
+  --gray: #586283;
+  --button-y: 0.9rem;
+  --button-x: 1.4rem;
+}
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap);
+@font-face {
+  font-family: "GTWalsheim Bold";
+  font-weight: 600;
+  font-style: normal;
+  src: url(./fonts/GTWalsheimPro-Bold.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GTWalsheim Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url(./fonts/GTWalsheimPro-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GTWalsheim Medium";
+  font-weight: 400;
+  font-style: normal;
+  src: url(./fonts/GTWalsheimPro-Medium.ttf) format("truetype");
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "GTWalsheim Medium", "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-stretch: normal;
+  letter-spacing: -0.32px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Mobile Style */
+.Active_Selector {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.Active_Selector svg {
+  margin-top: 0.3rem;
+}
+.App_Container {
+  width: 90vw;
+  margin-inline: auto;
+  margin-top: 4.75rem;
+  z-index: 0;
+}
+.App_NavLogo {
+  max-height: 1.9rem;
+}
+.App_Nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  padding-inline: 1.8rem;
+  /* border-bottom: 1px solid red; */
+}
+.App_NavButton_Mobile {
+  width: min-content;
+}
+.Line_Short {
+  width: 0.5rem;
+  background-color: var(--primary);
+  padding: 1px;
+}
+.Line_Long {
+  margin-top: 0.4rem;
+  width: 1.5rem;
+  background-color: var(--primary);
+  padding: 1px;
+}
+.App_NavLink,
+.App_NavButton {
+  font-family: "GTWalsheim Regular", "Inter", sans-serif;
+  display: none;
+}
+.Btn_White {
+  width: min-content;
+  margin-inline: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  padding-top: var(--button-y);
+  padding-bottom: var(--button-y);
+  padding-inline: var(--button-x);
+}
+.Btn_Blue {
+  font-family: "GTWalsheim Medium", "Inter", sans-serif;
+  margin-inline: 0.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.45rem;
+  font-size: 1rem;
+  padding-top: var(--button-y);
+  padding-bottom: var(--button-y);
+  padding-inline: var(--button-x);
+}
+.Flw_Logo {
+  height: 1.3rem;
+  margin-left: 3px;
+}
+.Hero_Text {
+  font-family: "GTWalsheim Bold", "Inter", sans-serif;
+  font-size: 3.95rem;
+  line-height: 4.6rem;
+  text-align: center;
+}
+.Hero_Text:nth-child(2) {
+  margin-top: -2rem;
+}
+.Hero_Color {
+  color: var(--secondary);
+}
+.Hero_Text_Small {
+  max-width: 85%;
+  margin-inline: auto;
+  font-family: "GTWalsheim Regular", "Inter", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  color: var(--gray);
+}
+.Hero_Partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+.Hero_Image {
+  position: relative;
+  max-width: 100%;
+  height: min-content;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  box-shadow: 0px -2px 50px -30px rgba(88, 98, 132, 0.4);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.Hero_Image_Side {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.Hero_Image_Main {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  z-index: 0;
+}
+.Hero_Connect {
+  font-family: "GTWalsheim Bold", "Inter", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 0rem;
+}
+.Phone {
+  height: 80vw;
+}
+.App_Use_Main {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+/* Laptop screen */
+@media (min-width: 768px) {
+  .App_Container {
+    width: 80vw;
+    margin-top: 9.75rem;
+  }
+  .App_NavLogo {
+    max-height: 2rem;
+  }
+  .App_Nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 1.2rem;
+    padding-inline: 6.3rem;
+    /* border-bottom: 1px solid red; */
+  }
+  .App_NavLink,
+  .App_NavButton {
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    display: inline-block;
+  }
+  .App_NavLink a {
+    margin-inline: 1rem;
+  }
+  .App_NavButton {
+    display: flex;
+  }
+  .App_NavButton_Mobile {
+    display: none;
+  }
+
+  .Hero_Text {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 5.625rem;
+    line-height: 3.3rem;
+    text-align: center;
+  }
+  .Hero_Text:nth-child(2) {
+    margin-top: 2rem;
+  }
+  .Hero_Color {
+    color: var(--secondary);
+  }
+  .Hero_Text_Small {
+    max-width: 45%;
+    margin-inline: auto;
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: var(--gray);
+  }
+  .Hero_Partner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+  .Hero_Connect {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  .Hero_Connect h2 {
+    width: 45%;
+    margin-inline: auto;
+    line-height: 4rem;
+  }
+  .Phone {
+    height: 30vw;
+  }
+}
+
+/* Larger monitors */
+@media (min-width: 1920px) {
+  .App_Container {
+    width: 65vw;
+    margin-top: 9.75rem;
+  }
+}
+
+/* Scroll animation */
+@keyframes ScrollDown {
+  100% {
+    transform: translateY(-40%);
+  }
+}
+@keyframes ScrollUp {
+  100% {
+    transform: translateY(40%);
+  }
+}
+
+/* LOCOMOTIVE */
+
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
