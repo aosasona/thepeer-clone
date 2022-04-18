@@ -1,0 +1,207 @@
+/* Laptop screen */
+@media screen and (min-width: 768px) {
+  .App_Text h1 {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 1.6rem;
+    line-height: -1rem;
+    color: var(--primary);
+    margin-top: -0.05rem;
+  }
+  .App_Text p {
+    line-height: 1.5rem;
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    color: var(--gray);
+    letter-spacing: 0.025rem;
+    margin-top: -0.2rem;
+  }
+  .App_Use_Main {
+    /* border: 2px solid red; */
+    width: 85%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+  }
+  .App_Single {
+    width: 30vw;
+  }
+  .App_Use {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+  }
+  .App_Container {
+    width: 80vw;
+    margin-top: 9.75rem;
+  }
+  .App_NavLogo {
+    max-height: 2rem;
+  }
+  .App_Nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 1.2rem;
+    padding-inline: 6.3rem;
+    /* border-bottom: 1px solid red; */
+  }
+  .App_NavLink,
+  .App_NavButton {
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    display: inline-block;
+  }
+  .App_NavLink a {
+    margin-inline: 1rem;
+  }
+  .App_NavButton {
+    display: flex;
+  }
+  .App_NavButton_Mobile {
+    display: none;
+  }
+  .Blue_Container {
+    height: 115vh;
+    overflow: hidden;
+  }
+  .Blue_Section {
+    width: 80vw;
+    margin-inline: auto;
+  }
+  .Blue_Section h1 {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    color: #fff;
+    font-size: 3rem;
+  }
+  .Blue_Section h3 {
+    color: white;
+    width: 40%;
+  }
+  .Blue_Section img {
+    width: 100%;
+    display: block;
+    margin-top: 18vh;
+  }
+  footer {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+  .Footer_Container {
+    width: 80vw;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .Footer_Brand {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  .Footer_Brand h2 {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: -0.05rem;
+  }
+  .Footer_Brand h3 {
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    font-size: 0.9rem;
+    /* line-height: 1.3rem; */
+    color: var(--light-gray);
+  }
+  .Footer_Links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 0.5;
+  }
+  .Footer_Links div h2 {
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    font-size: 1.1rem;
+  }
+  .Footer_Links div a {
+    display: block;
+    color: var(--light-gray);
+    margin-top: 1.6rem;
+  }
+  .Gray_Section {
+    width: 75vw;
+  }
+  .Gray_Container h1 {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+  .Gray_Container h2 {
+    width: auto;
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 2rem;
+  }
+  .Hero_Text {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 5.625rem;
+    line-height: 3.3rem;
+    text-align: center;
+  }
+  .Hero_Text:nth-child(2) {
+    margin-top: 2rem;
+  }
+  .Hero_Color {
+    color: var(--secondary);
+  }
+  .Hero_Text_Small {
+    max-width: 45%;
+    margin-inline: auto;
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: var(--gray);
+  }
+  .Hero_Partner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+  .Hero_Connect {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  .Hero_Connect h2 {
+    width: 45%;
+    margin-inline: auto;
+    line-height: 4rem;
+  }
+  .Phone {
+    height: 30vw;
+    margin-top: 0;
+  }
+}
+
+/* Larger monitors */
+@media screen and (min-width: 1920px) {
+  .App_Container {
+    width: 65vw;
+    margin-top: 9.75rem;
+  }
+  .App_Use_Main {
+    width: 95%;
+  }
+  .Gray_Section {
+    width: 70vw;
+  }
+  .Gray_Container h1 {
+    font-size: 3rem;
+  }
+}

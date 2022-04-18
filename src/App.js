@@ -5,7 +5,13 @@ import Logo from "./assets/img/logo.png";
 import Flw from "./assets/img/flutterwave.svg";
 import Sidebar from "./assets/img/Header-Sidebar.png";
 import ScrollImage from "./assets/img/middle-scrollable.png";
+import Sdk from "./assets/img/SDK_Dash.png";
 import Phone from "./assets/img/Phone.png";
+import Facebook from "./assets/img/FB.png";
+import Instagram from "./assets/img/IG.png";
+import LinkedIn from "./assets/img/In.png";
+import Twitter from "./assets/img/Tw.png";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HiArrowRight } from "react-icons/hi";
@@ -202,6 +208,7 @@ function App() {
         </div>
       </div>
 
+      {/* Call to action */}
       <div className="Gray_Container">
         <div className="Gray_Section">
           <h1>
@@ -218,6 +225,77 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* Get you started */}
+      <div className="Blue_Container">
+        <div className="Blue_Section">
+          <h1>
+            Let’s get you started.
+            <br />
+            Create an account today.
+          </h1>
+          <h3>
+            Start accepting payments from your customers with your business
+            having access to send, direct charge, link and recurring payment
+            products
+          </h3>
+          <a href=".">Get started for free</a>
+
+          <img src={Sdk} alt="SDK" />
+        </div>
+      </div>
+
+      <footer>
+        <div className="Footer_Container">
+          <div className="Footer_Brand">
+            <h2>Thepeer</h2>
+            <h3>&copy;2022. Peerstack Technologies Inc. All rights reserved</h3>
+            <div className="Footer_Icons">
+              <a href=".">
+                <img src={Facebook} alt="Footer Icon" />
+              </a>
+              <a href=".">
+                <img src={Instagram} alt="Footer Icon" />
+              </a>
+              <a href=".">
+                <img src={LinkedIn} alt="Footer Icon" />
+              </a>
+              <a href=".">
+                <img src={Twitter} alt="Footer Icon" />
+              </a>
+            </div>
+            <a href="mailto:support@thepeer.co" className="Footer_Mail">
+              support@thepeer.co
+            </a>
+          </div>
+
+          <div className="Footer_Links">
+            <div>
+              <h2>Products</h2>
+              <a href=".">Send</a>
+              <a href=".">Direct charge</a>
+            </div>
+            <div>
+              <h2>Company</h2>
+              <a href=".">About us</a>
+              <a href=".">Careers</a>
+              <a href=".">Blog</a>
+            </div>
+            <div>
+              <h2>Developers</h2>
+              <a href=".">API documentation</a>
+              <a href=".">Status</a>
+            </div>
+            <div>
+              <h2>Legal</h2>
+              <a href=".">Terms of service</a>
+              <a href=".">Privacy policy</a>
+              <a href=".">Cookie policy</a>
+              <a href=".">End user agreement</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
