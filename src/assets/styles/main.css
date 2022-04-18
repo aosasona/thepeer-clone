@@ -51,6 +51,9 @@ ul {
 }
 
 /* Mobile Style */
+.App_Gray {
+  color: #b6b6b6;
+}
 .Active_Selector {
   width: min-content;
   display: flex;
@@ -59,6 +62,17 @@ ul {
   align-items: center;
 }
 .Active_Selector svg {
+  margin-top: 0.3rem;
+}
+.Disabled_Selector {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.25;
+}
+.Disabled_Selector svg {
   margin-top: 0.3rem;
 }
 .App_Container {
@@ -86,6 +100,50 @@ ul {
 }
 .App_NavButton_Mobile {
   width: min-content;
+}
+.App_Use_Main {
+  width: min-content;
+  margin-inline: auto;
+  /* padding-inline: 3vw; */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+  margin-top: 4.5rem;
+}
+.App_Use {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+}
+.App_Single {
+  /* border: 2px solid red; */
+  margin-left: -2rem;
+  display: flex;
+  flex-direction: row;
+}
+.App_Text {
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  align-self: flex-start;
+}
+.App_Text h1 {
+  font-family: "GTWalsheim Bold", "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: -1rem;
+  color: var(--primary);
+  cursor: pointer;
+  margin-top: -0.05rem;
+}
+.App_Text p {
+  font-family: "GTWalsheim Regular", "Inter", sans-serif;
+  color: var(--gray);
+  line-height: 1.5rem;
+  letter-spacing: 0.025rem;
+  margin-top: -0.2rem;
 }
 .Line_Short {
   width: 0.5rem;
@@ -125,9 +183,37 @@ ul {
   padding-bottom: var(--button-y);
   padding-inline: var(--button-x);
 }
+.CTA {
+  display: flex;
+  align-items: center;
+}
+.CTA_Arrow {
+  margin-left: 1rem;
+  animation: 650ms BounceArrow ease-in-out alternate infinite;
+}
 .Flw_Logo {
   height: 1.3rem;
   margin-left: 3px;
+}
+.Gray_Container {
+  background-color: #fbfbfb;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  margin-top: 3.5rem;
+}
+.Gray_Section {
+  width: 86vw;
+  margin-inline: auto;
+}
+.Gray_Container h1 {
+  font-family: "GTWalsheim Bold", "Inter", sans-serif;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+}
+.Gray_Container h2 {
+  width: 85%;
+  font-family: "GTWalsheim Bold", "Inter", sans-serif;
+  font-size: 2rem;
 }
 .Hero_Text {
   font-family: "GTWalsheim Bold", "Inter", sans-serif;
@@ -159,13 +245,15 @@ ul {
 }
 .Hero_Image {
   position: relative;
-  max-width: 100%;
+  width: 95%;
+  margin-inline: auto;
   height: min-content;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  box-shadow: 0px -2px 50px -30px rgba(88, 98, 132, 0.4);
-  border-radius: 15px;
+  box-shadow: 0px -2px 50px -25px rgba(88, 98, 132, 0.4);
+  border-radius: 10px;
   overflow: hidden;
+  object-fit: contain;
 }
 .Hero_Image_Side {
   position: relative;
@@ -185,17 +273,48 @@ ul {
   margin-top: 5rem;
   margin-bottom: 0rem;
 }
+
 .Phone {
-  height: 80vw;
-}
-.App_Use_Main {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 3rem;
+  max-width: 65vw;
+  margin-top: 4vh;
+  object-fit: contain;
+  margin-inline: auto;
 }
 
 /* Laptop screen */
 @media (min-width: 768px) {
+  .App_Text h1 {
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 1.6rem;
+    line-height: -1rem;
+    color: var(--primary);
+    margin-top: -0.05rem;
+  }
+  .App_Text p {
+    line-height: 1.5rem;
+    font-family: "GTWalsheim Regular", "Inter", sans-serif;
+    color: var(--gray);
+    letter-spacing: 0.025rem;
+    margin-top: -0.2rem;
+  }
+  .App_Use_Main {
+    /* border: 2px solid red; */
+    width: 85%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+  }
+  .App_Single {
+    width: 30vw;
+  }
+  .App_Use {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+  }
   .App_Container {
     width: 80vw;
     margin-top: 9.75rem;
@@ -231,7 +350,18 @@ ul {
   .App_NavButton_Mobile {
     display: none;
   }
-
+  .Gray_Section {
+    width: 75vw;
+  }
+  .Gray_Container h1 {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+  .Gray_Container h2 {
+    width: auto;
+    font-family: "GTWalsheim Bold", "Inter", sans-serif;
+    font-size: 2rem;
+  }
   .Hero_Text {
     font-family: "GTWalsheim Bold", "Inter", sans-serif;
     font-size: 5.625rem;
@@ -274,6 +404,7 @@ ul {
   }
   .Phone {
     height: 30vw;
+    margin-top: 0;
   }
 }
 
@@ -283,101 +414,20 @@ ul {
     width: 65vw;
     margin-top: 9.75rem;
   }
+  .App_Use_Main {
+    width: 95%;
+  }
+  .Gray_Section {
+    width: 70vw;
+  }
+  .Gray_Container h1 {
+    font-size: 3rem;
+  }
 }
 
 /* Scroll animation */
-@keyframes ScrollDown {
+@keyframes BounceArrow {
   100% {
-    transform: translateY(-40%);
+    transform: translateX(1.2rem);
   }
-}
-@keyframes ScrollUp {
-  100% {
-    transform: translateY(40%);
-  }
-}
-
-/* LOCOMOTIVE */
-
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-  overflow: hidden;
-}
-
-html.has-scroll-dragging {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.has-scroll-smooth body {
-  overflow: hidden;
-}
-
-.has-scroll-smooth [data-scroll-container] {
-  min-height: 100vh;
-}
-
-[data-scroll-direction="horizontal"] [data-scroll-container] {
-  height: 100vh;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-[data-scroll-direction="horizontal"] [data-scroll-section] {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  height: 100%;
-}
-
-.c-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0;
-}
-.c-scrollbar:hover {
-  transform: scaleX(1.45);
-}
-.c-scrollbar:hover,
-.has-scroll-scrolling .c-scrollbar,
-.has-scroll-dragging .c-scrollbar {
-  opacity: 1;
-}
-[data-scroll-direction="horizontal"] .c-scrollbar {
-  width: 100%;
-  height: 10px;
-  top: auto;
-  bottom: 0;
-  transform: scaleY(1);
-}
-[data-scroll-direction="horizontal"] .c-scrollbar:hover {
-  transform: scaleY(1.3);
-}
-
-.c-scrollbar_thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  width: 7px;
-  border-radius: 10px;
-  margin: 2px;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-.has-scroll-dragging .c-scrollbar_thumb {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-  right: auto;
-  bottom: 0;
 }

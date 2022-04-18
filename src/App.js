@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import Active from "./components/Active";
+import ActiveLine from "./components/Active";
+import DisabledLine from "./components/Disabled";
 import Logo from "./assets/img/logo.png";
 import Flw from "./assets/img/flutterwave.svg";
 import Sidebar from "./assets/img/Header-Sidebar.png";
@@ -7,6 +8,7 @@ import ScrollImage from "./assets/img/middle-scrollable.png";
 import Phone from "./assets/img/Phone.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HiArrowRight } from "react-icons/hi";
 
 function App() {
   const [Active, setActive] = useState(1);
@@ -36,6 +38,13 @@ function App() {
       }
     );
   }, []);
+
+  //Check which tab is active
+  const tab = (index) => {
+    if (index === Active) {
+      return true;
+    }
+  };
 
   // useEffect(() => {
   //   const scroll = new LocomotiveScroll({
@@ -112,8 +121,101 @@ function App() {
         </div>
 
         <div className="App_Use_Main">
-          <div className="App_Use"></div>
-          <img src={Phone} alt="Phone" className="Phone" />
+          <div className="App_Use">
+            {/* First tab */}
+            <div className="App_Single" onClick={() => setActive(1)}>
+              {tab(1) ? <ActiveLine /> : <DisabledLine />}
+              <div className="App_Text">
+                <h1 style={tab(1) ? { color: "#0066ff" } : { color: "#000" }}>
+                  Send money to other businesses
+                </h1>
+                {tab(1) && (
+                  <p>
+                    We enable your customers to send money without hassle to
+                    other business apps of their choice with your business
+                    getting settled instantly. It is that simple.
+                  </p>
+                )}
+              </div>
+            </div>
+            {/* Second tab */}
+            <div className="App_Single" onClick={() => setActive(2)}>
+              {tab(2) ? <ActiveLine /> : <DisabledLine />}
+              <div className="App_Text">
+                <h1 style={tab(2) ? { color: "#0066ff" } : { color: "#000" }}>
+                  Link your account
+                </h1>
+                {tab(2) && (
+                  <p>
+                    Your customers can link their various accounts on other
+                    businesses with ease. With this, each customer is able to
+                    allow the apps interact with each other seamlessly.
+                  </p>
+                )}
+              </div>
+            </div>
+            {/* Third Tab */}
+            <div className="App_Single" onClick={() => setActive(3)}>
+              {tab(3) ? (
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="10" cy="10" r="9.5" stroke="#0066FF"></circle>
+                  <circle cx="10" cy="10" r="5" fill="#0066FF"></circle>
+                </svg>
+              ) : (
+                <div className="Disabled_Selector">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="10" cy="10" r="9.5" stroke="#0066FF"></circle>
+                    <circle cx="10" cy="10" r="5" fill="#0066FF"></circle>
+                  </svg>{" "}
+                </div>
+              )}
+              <div className="App_Text">
+                <h1 style={tab(3) ? { color: "#0066ff" } : { color: "#000" }}>
+                  Direct charge
+                </h1>
+                {tab(3) && (
+                  <p>
+                    Let your customers pay anywhere and anytime at their
+                    convenience. Direct charge are now easier with Thepeer and
+                    our platform encourages customers to structure payments on
+                    their own schedule.
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src={Phone} alt="Phone" className="Phone" />
+          </div>
+        </div>
+      </div>
+
+      <div className="Gray_Container">
+        <div className="Gray_Section">
+          <h1>
+            We help you understand your customers beyond your platform, so you
+            can serve them better.{" "}
+            <span className="App_Gray">
+              Customer behaviour is changing rapidly and our platform supports
+              insight-driven approaches to building technology solutions.
+            </span>
+          </h1>
+          <div className="CTA">
+            <h2>Begin onboarding for free</h2>
+            <HiArrowRight size={35} className="CTA_Arrow" />
+          </div>
         </div>
       </div>
     </div>
